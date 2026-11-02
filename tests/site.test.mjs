@@ -45,3 +45,12 @@ test("the Snoopy mascot is replaced by the supplied kitten sticker artwork", () 
   assert.match(html, /kitty wants to deliver a message!/);
   assert.doesNotMatch(html, /Snoopy|snoopy|beagle/i);
 });
+
+test("the ten-things chapter has a styled responsive keepsake gallery and kitten accents", () => {
+  assert.match(html, /Ten reasons — polished keepsake gallery/);
+  assert.match(html, /grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
+  assert.match(html, /reason-panel\.final-reason\{grid-column:1\/-1/);
+  assert.match(html, /assets\/cat-stickers\.webp/);
+  assert.match(html, /@media\(max-width:370px\)/);
+  assert.equal((html.match(/<article class="reason-panel(?: final-reason)?">/g) || []).length, 10);
+});
