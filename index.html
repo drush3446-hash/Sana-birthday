@@ -1,1 +1,228 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#d9effb"><title>For Sana ♡ Birthday Scrapbook</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800&family=Patrick+Hand&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body class="welcome"><main class="cover"><p class="eyebrow">A TINY BIRTHDAY WORLD MADE JUST FOR</p><h1>Sana's Birthday<br><em>Scrapbook</em></h1><section class="paper gingham"><div class="tape"></div><div class="dog"><i class="body"></i><i class="head"><b class="ear"></b><b class="eye"></b><b class="nose"></b></i><i class="arm"></i><i class="envelope">♡</i></div><p class="hand">pssst… someone made a little surprise for you!</p><a class="btn" href="invitation.html">OPEN YOUR SURPRISE ↗</a><p class="stars">✦　♡　✧　♡　✦</p></section><p class="footnote">PLEASE OPEN WITH A SMILE · MADE WITH LOVE</p></main><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#dceefa">
+<meta name="description" content="A tiny Snoopy-inspired birthday scrapbook made with love for Sana.">
+<title>For Sana ♡ A Birthday Scrapbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Patrick+Hand&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#dceefa;--blue2:#bfd9eb;--dust:#a9c6dc;--cream:#fffaf0;--paper:#fffdf8;--ink:#344657;--muted:#7b8e9d;--pink:#f2dce1;--rose:#c98fa1;--line:#b8cbd8;--shadow:0 18px 48px #6e8ba31c;--hand:"Patrick Hand",cursive;--serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-snap-type:y proximity}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #9abbd3;outline-offset:4px}
+.topbar{position:fixed;z-index:20;top:0;left:0;right:0;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(16px,4vw,54px);background:#fffdf0d9;backdrop-filter:blur(12px);border-bottom:1px solid #c8d8e2aa;color:#75899a;font-size:9px;font-weight:800;letter-spacing:.17em}
+.topbar .brand{font:20px var(--hand);letter-spacing:0;color:#6f8da5}.progress{height:3px;position:fixed;z-index:21;top:48px;left:0;background:var(--rose);width:0;transition:width .15s}
+.scene{position:relative;min-height:min(100svh,56.25vw);aspect-ratio:16/9;max-height:100svh;display:grid;place-items:center;overflow:hidden;scroll-snap-align:start;padding:72px 22px 50px}
+.scene-inner{width:min(100%,980px);min-height:0;display:grid;place-items:center;text-align:center;position:relative}
+.scene-card{position:relative;width:min(100%,760px);padding:clamp(28px,5vw,66px) clamp(18px,5vw,58px);background:#fffdf0d9;border:1px solid #a9c1d2;box-shadow:var(--shadow)}
+.gingham{background-color:#f8fbfc;background-image:linear-gradient(45deg,#d5e8f4 25%,transparent 25%),linear-gradient(-45deg,#d5e8f4 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#d5e8f4 75%),linear-gradient(-45deg,transparent 75%,#d5e8f4 75%);background-size:28px 28px;background-position:0 0,0 14px,14px -14px,-14px 0}
+.pinstripe{background-color:#fffdf8;background-image:repeating-linear-gradient(90deg,#d7e8f3 0 2px,transparent 2px 18px)}
+.blush{background:radial-gradient(circle at 20% 20%,#fae9ec,#f5dfe4 55%,#f7e9e9)}
+.diamond{background-color:#fffaf0;background-image:linear-gradient(45deg,#d6e6ef 25%,transparent 25%,transparent 75%,#d6e6ef 75%),linear-gradient(45deg,#d6e6ef 25%,transparent 25%,transparent 75%,#d6e6ef 75%);background-size:44px 44px;background-position:0 0,22px 22px}
+.eyebrow{margin:0 0 13px;color:#8094a4;font-size:9px;font-weight:800;letter-spacing:.23em;text-transform:uppercase}
+h1,h2,p{margin-top:0}h1{margin-bottom:15px;font:700 clamp(38px,6.2vw,76px)/.98 var(--hand);letter-spacing:-.025em;color:#34495b}h1 em{font-style:normal;color:#7899b4}h2{font:500 clamp(26px,4vw,42px)/1.1 var(--hand);color:#6d8da6}
+.copy{max-width:590px;margin:0 auto 24px;font:16px/1.85 var(--serif);color:#718291}
+.caption{margin:15px 0 0;font:700 13px/1.4 var(--hand);letter-spacing:.035em;color:#526a7e}
+.hand{font:22px var(--hand);color:#7893a8}
+.pill{border:1px solid #9eb9cc;border-radius:999px;background:#edf6fb;color:#4e6a80;padding:13px 28px;min-width:118px;font:700 12px var(--sans);letter-spacing:.06em;box-shadow:0 4px 0 #b6ccda;transition:transform .2s,box-shadow .2s}
+.pill:hover{transform:translateY(-2px);box-shadow:0 6px 0 #b6ccda}.pill.secondary{background:#fffaf3;border-color:#d4b7bd;color:#9b7381;box-shadow:0 4px 0 #e5cbd1}
+.actions{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:24px}
+.next-link{display:inline-flex;align-items:center;gap:9px;margin-top:28px;color:#718da3;font-size:9px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.next-link span{font-size:16px;color:#bd8a9b}
+.dog{width:190px;height:170px;display:block;margin:0 auto 8px;overflow:visible}
+.dog.small{width:112px;height:105px;margin:0}.dog .stroke{stroke:#35404a;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.dog .fur{fill:#fffefa}.dog .black{fill:#2f3943}.dog .pink{fill:#dca8b4}.dog .paper{fill:#fffaf0;stroke:#8ea9bc;stroke-width:2}
+.note{font:17px var(--hand);fill:#7c91a2}
+.dog-wrap{display:flex;justify-content:center;align-items:center;gap:10px}
+.envelope-illustration{width:54px;height:40px;border:1.5px solid #8ea9bc;background:#fffaf0;position:relative;transform:rotate(-8deg);box-shadow:4px 4px 0 #d7e6ef}
+.envelope-illustration:before{content:"";position:absolute;left:6px;right:6px;top:-1px;height:24px;border-left:1.5px solid #8ea9bc;border-bottom:1.5px solid #8ea9bc;transform:rotate(-45deg) scale(.72);transform-origin:top left}
+.calendar-wrap{display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:30px;width:min(100%,760px);margin:0 auto}
+.calendar-dog{display:grid;place-items:center}
+.calendar-card{padding:25px;background:#fffdf7;border:1px solid #a9c0cf;box-shadow:8px 10px 0 #b9d1df77;transform:rotate(1deg)}
+.month{font:700 27px var(--hand);letter-spacing:.16em;color:#6887a0;margin:0 0 15px}
+.dates{display:flex;justify-content:center;gap:15px}
+.date-choice{width:105px;height:105px;border:1px solid #c4d3dc;background:#f8fbfb;color:#7691a6;border-radius:5px;display:grid;place-items:center;transition:.2s}
+.date-choice strong{font:700 40px var(--hand);line-height:1}.date-choice small{font-size:9px;letter-spacing:.18em}
+.date-choice[aria-pressed=true]{background:#dcecf5;border:2px solid #91b0c6;box-shadow:0 0 0 5px #dcecf566;color:#46667e;transform:translateY(-4px)}
+.selected-date{min-height:20px;margin:14px 0 0;font:17px var(--hand);color:#7994a8}
+.cake-art{position:relative;width:220px;height:205px;margin:0 auto 8px;cursor:pointer;outline-offset:10px}
+.cake-plate{position:absolute;bottom:15px;left:0;width:220px;height:22px;border:2px solid #8fa9b9;border-radius:50%;background:#fffaf3}
+.cake-base{position:absolute;bottom:34px;left:23px;width:174px;height:83px;border:2px solid #9bb0bc;border-radius:12px 12px 20px 20px;background:linear-gradient(90deg,#e8b8c3,#fff8f1 50%,#e8b8c3)}
+.cake-icing{position:absolute;bottom:97px;left:23px;width:174px;height:33px;border:2px solid #9bb0bc;border-radius:50% 50% 12px 12px;background:#fffdf5}
+.cake-icing:after{content:"";position:absolute;left:23px;top:12px;width:12px;height:19px;background:#fffdf5;border-radius:0 0 10px 10px;box-shadow:38px 0 #fffdf5,78px 0 #fffdf5,118px 0 #fffdf5}
+.candle{position:absolute;z-index:2;left:103px;bottom:126px;width:14px;height:42px;border:1px solid #b77e8e;background:repeating-linear-gradient(135deg,#fff 0 7px,#e9b5c0 7px 14px)}
+.flame{position:absolute;z-index:3;left:101px;bottom:165px;width:18px;height:25px;background:radial-gradient(ellipse at 50% 65%,#fff7c8 10%,#ffc95c 55%,#ef9871 85%);border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 0 22px #ffc95c;animation:flicker .7s ease-in-out infinite alternate}
+.flame.out{display:none}@keyframes flicker{to{transform:rotate(-40deg) scale(.9)}}
+.polaroid{position:relative;width:min(80%,330px);margin:12px auto 0;padding:12px 12px 44px;background:#fffefa;border:1px solid #d7d1c5;box-shadow:0 18px 38px #526a7e30;transform:rotate(-4deg)}
+.polaroid-photo{height:210px;display:grid;place-items:center;background:linear-gradient(145deg,#d9eaf3,#f5eee7);border:1px solid #e5e0d7;color:#8298a8;font:14px var(--hand);letter-spacing:.1em}
+.polaroid-label{position:absolute;bottom:12px;left:0;right:0;font:21px var(--hand);color:#6f879b}
+.birthday-badge{position:absolute;z-index:2;top:5%;right:calc(50% - 185px);width:94px;height:94px;border-radius:50%;display:grid;place-items:center;background:#e8b7c4;color:#fffaf5;border:2px dashed #fffaf5;outline:1px solid #d19baa;font:700 13px/1.1 var(--hand);transform:rotate(12deg)}
+.lace{position:absolute;inset:5px;border:1px dashed #c5b9a9;pointer-events:none}
+.letter-page{min-height:100svh;padding:92px 20px 65px;background:linear-gradient(180deg,#fffaf0 0%,#f6f4eb 20%,#dceefa 100%);scroll-snap-align:start}
+.letter-shell{max-width:800px;margin:0 auto;text-align:center}
+.letter-heading{display:flex;align-items:center;justify-content:center;gap:12px}
+.letter-heading h1{font-size:clamp(38px,6vw,70px);margin:0}
+.round-photo{width:190px;height:190px;margin:30px auto 36px;border-radius:50%;padding:9px;background:#fffdf7;border:2px dashed #9fb9ca;box-shadow:0 12px 28px #6f8ba322;position:relative}
+.round-photo:before{content:"";position:absolute;inset:-7px;border:1px solid #d3b6bd;border-radius:50%}
+.round-photo .photo-slot{height:100%;border-radius:50%;background:linear-gradient(145deg,#d7e9f3,#f8eee9)}
+.letter-paper{max-width:680px;margin:0 auto;padding:clamp(24px,5vw,48px);background:#fffdf5d9;border:1px solid #c8d7de;box-shadow:0 16px 42px #718ca322;text-align:left}
+.letter-paper h2{font:italic 28px var(--serif);color:#9a7b88;margin:0 0 20px}
+.letter-paper p{font:16px/2 var(--serif);color:#5d7180;margin:0 0 18px}
+.signature{text-align:right!important;font:25px var(--hand)!important;color:#819bb0!important;margin:24px 0 0!important}
+.paper-plane{margin:32px auto 0;display:flex;justify-content:center;align-items:center;gap:10px;color:#7795aa;font:19px var(--hand)}
+.plane{font-size:35px;transform:rotate(-18deg)}
+.reasons-page{padding:88px 18px 70px;background:var(--cream);scroll-snap-align:start}
+.reasons-head{text-align:center;max-width:850px;margin:0 auto 44px}
+.reasons-head h1{font-size:clamp(38px,6vw,72px);transform:rotate(-2deg);margin-bottom:14px}
+.reasons-head p{font:17px var(--serif);color:#81909b}
+.reason-list{max-width:1000px;margin:0 auto;display:grid;gap:24px}
+.reason-panel{position:relative;display:grid;grid-template-columns:minmax(200px,.78fr) minmax(0,1.5fr);align-items:center;gap:clamp(20px,5vw,62px);padding:clamp(22px,4vw,48px);border:1px solid #d7d5ca;box-shadow:0 12px 30px #647e9015;overflow:hidden}
+.reason-panel:nth-child(even){grid-template-columns:minmax(0,1.5fr) minmax(200px,.78fr);background:#dceefa;border-color:#b8d0df}
+.reason-panel:nth-child(odd){background:#fffdf6}
+.reason-panel:nth-child(even) .reason-copy{order:2}.reason-panel:nth-child(even) .collage{order:1}
+.reason-copy{position:relative;z-index:1;text-align:left}
+.reason-number{display:block;font:700 clamp(54px,8vw,90px)/.85 var(--hand);color:#9bbbd0;letter-spacing:-.06em}
+.reason-panel:nth-child(even) .reason-number{color:#7898b2}
+.reason-title{font:italic clamp(26px,4vw,38px)/1.1 var(--serif);color:#a17f8d;margin:13px 0 9px}
+.reason-panel:nth-child(even) .reason-title{color:#607f98}
+.reason-copy p{font:14px/1.8 var(--serif);color:#748391;max-width:300px;margin:0}
+.collage{display:grid;gap:10px;grid-template-columns:1fr 1fr;align-items:center;min-width:0}
+.collage.one{grid-template-columns:1fr}.collage.three{grid-template-columns:1fr 1fr}
+.photo-slot{position:relative;min-height:150px;aspect-ratio:4/3;overflow:hidden;border:7px solid #fffdf8;border-bottom-width:18px;border-radius:3px;box-shadow:0 7px 18px #526a7e22;background:linear-gradient(145deg,#d9eaf3,#f7eee8);display:grid;place-items:center;text-align:center;color:#7c93a4;font:13px var(--hand);letter-spacing:.08em}
+.photo-slot:after{content:"♡";position:absolute;right:9px;bottom:0;font:16px var(--hand);color:#c58ea0}
+.collage .photo-slot:nth-child(2){transform:rotate(2deg);background:linear-gradient(145deg,#f4e3e5,#e9f2f5)}
+.collage .photo-slot:nth-child(3){transform:rotate(-2deg);background:linear-gradient(145deg,#e5edf1,#f8efe1)}
+.collage.one .photo-slot{aspect-ratio:16/10;min-height:210px}
+.collage.two .photo-slot:first-child{transform:rotate(-2deg)}
+.collage.three .photo-slot:first-child{grid-row:span 2;aspect-ratio:3/4;min-height:220px}
+.collage.three .photo-slot:not(:first-child){min-height:105px;aspect-ratio:4/3}
+.reason-panel.final-reason{background:#f5e4dc;border-color:#d8b6aa;grid-template-columns:.75fr 1.5fr;padding:clamp(28px,5vw,58px)}
+.final-reason .reason-number{color:#bd8a7b}.final-reason .reason-title{color:#a56f69}.final-reason .collage .photo-slot{min-height:250px;aspect-ratio:16/10}
+.final-line{grid-column:1/-1;text-align:center;margin:12px 0 0;font:italic clamp(30px,5vw,48px) var(--serif);color:#a16f77}
+.footer-doodle{display:flex;align-items:center;justify-content:center;gap:10px;margin:30px auto 0;color:#8199aa;font:21px var(--hand)}
+.footer-doodle .dog{width:80px;height:72px;margin:0}
+.corner-doodle{position:absolute;right:15px;bottom:12px;opacity:.42;font:24px var(--hand);color:#9ab6c8}
+.page-count{position:absolute;bottom:19px;left:0;right:0;color:#8aa0b0;font-size:8px;font-weight:800;letter-spacing:.2em}
+.photo-help{margin:20px auto 0;font:13px var(--hand);color:#8496a4}
+@media(max-width:760px){html{scroll-snap-type:y proximity}.topbar{height:42px}.progress{top:42px}.scene{min-height:100svh;aspect-ratio:auto;padding:70px 16px 42px}.scene-card{width:100%;padding:34px 18px}.dog{width:155px;height:140px}.calendar-wrap{grid-template-columns:1fr;gap:10px}.calendar-dog .dog{width:105px;height:95px}.calendar-card{width:min(100%,380px);margin:0 auto;padding:18px}.date-choice{width:95px;height:95px}.birthday-badge{right:6%;top:7%;width:76px;height:76px;font-size:11px}.polaroid{width:min(76%,300px)}.polaroid-photo{height:180px}.letter-page{padding:80px 15px 50px}.letter-heading{gap:5px}.letter-heading .dog{width:85px;height:78px}.round-photo{width:150px;height:150px;margin:22px auto 28px}.letter-paper{padding:24px 20px}.letter-paper p{font-size:15px;line-height:1.9}.reasons-page{padding:76px 13px 50px}.reason-list{gap:16px}.reason-panel,.reason-panel:nth-child(even),.reason-panel.final-reason{grid-template-columns:1fr;gap:16px;padding:20px}.reason-panel:nth-child(even) .reason-copy,.reason-panel:nth-child(even) .collage{order:initial}.reason-copy{text-align:center}.reason-copy p{margin:0 auto}.reason-number{font-size:58px}.reason-title{font-size:28px;margin:8px 0}.collage{gap:7px}.photo-slot{min-height:125px}.collage.one .photo-slot{min-height:190px}.collage.three .photo-slot:first-child{min-height:190px}.collage.three .photo-slot:not(:first-child){min-height:90px}.final-reason .collage .photo-slot{min-height:220px}.final-line{font-size:32px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="brand" href="#page-1">Sana's little scrapbook ♡</a><span>MADE WITH LOVE · NOVEMBER EDITION</span></div>
+<div class="progress" id="progress"></div>
+<main>
+<section class="scene gingham" id="page-1" aria-label="Page 1, a message from Snoopy">
+<div class="scene-inner"><div class="scene-card">
+<svg class="dog" viewBox="0 0 190 170" role="img" aria-label="A hand-drawn white beagle holding a little note">
+<g class="stroke"><ellipse class="fur" cx="83" cy="132" rx="43" ry="24"/><path class="fur" d="M54 119Q45 99 59 82Q68 70 88 75Q111 79 119 100L113 127Q92 143 64 132Z"/><path class="fur" d="M73 84Q60 65 67 43Q74 18 104 20Q135 23 140 49Q143 73 122 88Q100 101 73 84Z"/><path class="black" d="M75 33Q52 22 44 49Q39 75 65 90Q75 91 79 79Q63 61 75 33Z"/><path class="stroke" fill="none" d="M113 54q5 -5 9 0"/><ellipse class="black" cx="124" cy="66" rx="5" ry="4"/><path fill="none" d="M112 75q-10 9 -20 0"/><path class="fur" d="M107 93q20 3 26 18l-16 12q-17-12-25-18"/><path class="fur" d="M54 132q-5 14 7 17h24q8-5 0-13"/><path class="fur" d="M95 137q-3 11 8 12h22q8-6-2-13"/></g>
+<rect class="paper" x="120" y="105" width="44" height="34" rx="3" transform="rotate(-8 120 105)"/><path class="stroke" fill="none" d="M123 108l19 15 20-18"/><text x="141" y="132" text-anchor="middle" class="note">♡</text>
+</svg>
+<p class="caption">snoopy wants to deliver a message!</p>
+<a class="next-link" href="#page-2">open the little note <span>♡ →</span></a>
+</div></div><div class="page-count">01 / 07</div>
+</section>
+
+<section class="scene gingham" id="page-2" aria-label="Page 2, accept the invitation">
+<div class="scene-inner"><div class="scene-card">
+<svg class="dog" viewBox="0 0 190 170" role="img" aria-label="A hand-drawn beagle holding an envelope">
+<g class="stroke"><ellipse class="fur" cx="82" cy="133" rx="43" ry="22"/><path class="fur" d="M55 119Q45 99 59 82Q70 68 91 76Q112 81 119 103L112 130Q88 145 62 132Z"/><path class="fur" d="M73 84Q60 65 67 43Q74 18 104 20Q135 23 140 49Q143 73 122 88Q100 101 73 84Z"/><path class="black" d="M75 33Q52 22 44 49Q39 75 65 90Q75 91 79 79Q63 61 75 33Z"/><ellipse class="black" cx="124" cy="66" rx="5" ry="4"/><path fill="none" d="M112 75q-10 9 -20 0"/><path class="fur" d="M108 94q20 3 27 18l-16 12q-17-12-25-18"/><path class="fur" d="M54 132q-5 14 7 17h24q8-5 0-13"/><path class="fur" d="M95 137q-3 11 8 12h22q8-6-2-13"/></g>
+<rect class="paper" x="119" y="101" width="48" height="34" rx="3" transform="rotate(-8 119 101)"/><path class="stroke" fill="none" d="M121 103l22 17 23-21"/><path d="M139 124q-7-8-11-2q-4 7 11 14q15-7 11-14q-4-6-11 2" fill="#d99daf"/>
+</svg>
+<p class="eyebrow">A VERY IMPORTANT QUESTION</p><h1>Will you accept<br><em>this little surprise?</em></h1>
+<p class="copy">Snoopy has been carrying this invitation all day. He really hopes you'll say yes.</p>
+<div class="actions"><button class="pill" id="accept">accept ♡</button><button class="pill secondary" id="decline">decline</button></div>
+<p class="caption" id="invite-message" aria-live="polite">a tiny surprise is waiting just for you</p>
+<a class="next-link" href="#page-3">continue <span>♡ →</span></a>
+</div></div><div class="page-count">02 / 07</div>
+</section>
+
+<section class="scene pinstripe" id="page-3" aria-label="Page 3, choose a November date">
+<div class="scene-inner">
+<div class="calendar-wrap">
+<div class="calendar-dog">
+<svg class="dog" viewBox="0 0 190 170" role="img" aria-label="A little beagle waving">
+<g class="stroke"><ellipse class="fur" cx="80" cy="137" rx="39" ry="19"/><path class="fur" d="M54 122Q47 101 60 84Q72 69 94 77Q115 83 119 106L110 132Q84 145 60 133Z"/><path class="fur" d="M74 83Q59 63 68 42Q77 18 105 22Q135 25 139 50Q141 73 120 88Q97 101 74 83Z"/><path class="black" d="M76 34Q51 20 44 49Q39 76 65 90Q75 91 80 78Q63 60 76 34Z"/><ellipse class="black" cx="123" cy="65" rx="5" ry="4"/><path fill="none" d="M112 75q-10 9 -20 0"/><path class="fur" d="M108 96q19-3 26-20q4-12 13-17q10-1 8 12q-3 24-33 40"/><path class="fur" d="M55 134q-4 12 7 14h22q7-5 0-13"/><path class="fur" d="M95 137q-3 10 8 12h22q8-6-2-13"/></g>
+</svg><p class="hand">a little date picker ♡</p></div>
+<div class="calendar-card"><p class="month">NOVEMBER</p><div class="dates"><button class="date-choice" data-date="08" aria-pressed="false"><strong>08</strong><small>NOV</small></button><button class="date-choice" data-date="26" aria-pressed="false"><strong>26</strong><small>NOV</small></button></div><p class="selected-date" id="date-message" aria-live="polite">choose the date that feels right</p></div>
+</div>
+<p class="caption">snoopy wants to know what day is today</p>
+<a class="next-link" href="#page-4">next little surprise <span>♡ →</span></a>
+</div><div class="page-count">03 / 07</div>
+</section>
+
+<section class="scene blush" id="page-4" aria-label="Page 4, make a birthday wish">
+<div class="scene-inner"><div class="scene-card" style="background:#fffaf0c9;border-color:#d7b7c0">
+<p class="eyebrow">CLOSE YOUR EYES FOR A SECOND</p><h1>Make a wish,<br><em>birthday girl.</em></h1>
+<div class="cake-art" id="cake" role="button" tabindex="0" aria-label="Tap to blow out the candle">
+<div class="flame" id="flame"></div><div class="candle"></div><div class="cake-icing"></div><div class="cake-base"></div><div class="cake-plate"></div>
+</div>
+<p class="caption" id="cake-caption">snoopy wants you to make a wish before blowing the candle</p>
+<p class="hand" id="wish-message" aria-live="polite"></p>
+<a class="next-link" href="#page-5">keep going <span>♡ →</span></a>
+</div></div><div class="page-count">04 / 07</div>
+</section>
+
+<section class="scene diamond" id="page-5" aria-label="Page 5, birthday polaroid">
+<div class="scene-inner">
+<div class="birthday-badge">happy<br>birthday ♡</div>
+<div class="scene-card" style="max-width:620px;background:#fffaf0d9;border-color:#c9b9a5">
+<p class="eyebrow">A LITTLE KEEPSAKE FOR YOU</p>
+<h1>One for the<br><em>memory book.</em></h1>
+<div class="polaroid"><div class="lace"></div><div class="polaroid-photo">YOUR FAVOURITE PHOTO ♡</div><div class="polaroid-label">a moment to keep</div></div>
+<p class="caption">a little picture, a lifetime of lovely feelings</p>
+<a class="next-link" href="#letter">turn the page <span>♡ →</span></a>
+</div></div><div class="page-count">05 / 07</div>
+</section>
+
+<section class="letter-page" id="letter" aria-label="A birthday letter for Sana">
+<div class="letter-shell">
+<p class="eyebrow">A NOTE WRITTEN JUST FOR YOU</p>
+<div class="letter-heading"><h1>HAPPY BIRTHDAY<br><em>SANA</em></h1><svg class="dog small" viewBox="0 0 190 170" role="img" aria-label="A beagle with a heart"><g class="stroke"><ellipse class="fur" cx="82" cy="132" rx="43" ry="24"/><path class="fur" d="M54 119Q45 99 59 82Q68 70 88 75Q111 79 119 100L113 127Q92 143 64 132Z"/><path class="fur" d="M73 84Q60 65 67 43Q74 18 104 20Q135 23 140 49Q143 73 122 88Q100 101 73 84Z"/><path class="black" d="M75 33Q52 22 44 49Q39 75 65 90Q75 91 79 79Q63 61 75 33Z"/><ellipse class="black" cx="124" cy="66" rx="5" ry="4"/><path fill="none" d="M112 75q-10 9 -20 0"/></g><path d="M148 23q-10-12-19 0q-8 13 19 29q27-16 19-29q-9-12-19 0" fill="#dba6b6"/></svg></div>
+<div class="round-photo"><div class="photo-slot">SANA'S PHOTO ♡</div></div>
+<article class="letter-paper">
+<h2>Dear, Sana,</h2>
+<p>Some people make ordinary days feel a little more beautiful just by being themselves. Tum unhi logon mein se ho. I hope tum kabhi bhoolo nahi ki tum kitni special ho, tumhari smile kitni precious hai, aur tum kitni saari khushiyon ki deserving ho.</p>
+<p>On your birthday, I wish you a year filled with peaceful mornings, exciting opportunities, unexpected little joys and dreams that slowly turn into reality. May you always find the courage to choose yourself, the strength to keep growing, and a hundred reasons to smile every single day.</p>
+<p>Thank you for being exactly who you are. I hope life is gentle with your heart, kind to your dreams, and generous with all the happiness you deserve. Keep shining in your own beautiful way.</p>
+<p class="signature">With lots of love, always ♡</p>
+</article>
+<div class="paper-plane"><span class="plane">✈</span><span>a little love note, sent your way</span><span>♡</span></div>
+<a class="next-link" href="#reasons">one more little chapter <span>♡ →</span></a>
+</div>
+</section>
+
+<section class="reasons-page" id="reasons" aria-label="Ten things I love about you">
+<header class="reasons-head"><p class="eyebrow">A LIST THAT COULD GO ON FOREVER</p><h1>10 THINGS I LOVE<br><em>ABOUT YOU</em></h1><p>Ten little reasons. A million more waiting to be written. ♡</p></header>
+<div class="reason-list">
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">01</span><h2 class="reason-title">Your smile</h2><p>It makes even an ordinary day feel softer and brighter.</p></div><div class="collage one"><div class="photo-slot" data-photo="smile">ADD SANA'S SMILE PHOTO</div></div><span class="corner-doodle">♡</span></article>
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">02</span><h2 class="reason-title">Your eyes</h2><p>There's a whole little universe in the way your eyes shine.</p></div><div class="collage two"><div class="photo-slot" data-photo="eyes">ADD EYES CLOSE-UP</div><div class="photo-slot" data-photo="eyes-2">ADD ANOTHER EYES PHOTO</div></div><span class="corner-doodle">✧</span></article>
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">03</span><h2 class="reason-title">Your laugh</h2><p>The kind of laugh that makes everyone around you smile too.</p></div><div class="collage three"><div class="photo-slot" data-photo="laugh">ADD LAUGHING PHOTO</div><div class="photo-slot" data-photo="laugh-2">ADD CANDID</div><div class="photo-slot" data-photo="laugh-3">ADD A FUN MOMENT</div></div><span class="corner-doodle">♡</span></article>
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">04</span><h2 class="reason-title">Your kind heart</h2><p>The care you give, even in the smallest things, means so much.</p></div><div class="collage two"><div class="photo-slot" data-photo="heart">ADD A FAVOURITE MOMENT</div><div class="photo-slot" data-photo="heart-2">ADD A MEMORY</div></div><span class="corner-doodle">✿</span></article>
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">05</span><h2 class="reason-title">Your little habits</h2><p>All those tiny things that make you unmistakably you.</p></div><div class="collage one"><div class="photo-slot" data-photo="habits">ADD A NATURAL CANDID</div></div><span class="corner-doodle">♡</span></article>
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">06</span><h2 class="reason-title">Your strength</h2><p>You keep moving forward, even on the days that ask a lot from you.</p></div><div class="collage two"><div class="photo-slot" data-photo="strength">ADD A PHOTO YOU LOVE</div><div class="photo-slot" data-photo="strength-2">ADD ANOTHER MEMORY</div></div><span class="corner-doodle">✧</span></article>
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">07</span><h2 class="reason-title">Your voice</h2><p>Somehow, even the simplest conversations become favourite memories.</p></div><div class="collage three"><div class="photo-slot" data-photo="voice">ADD A PORTRAIT</div><div class="photo-slot" data-photo="voice-2">ADD A MOMENT</div><div class="photo-slot" data-photo="voice-3">ADD A CANDID</div></div><span class="corner-doodle">♡</span></article>
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">08</span><h2 class="reason-title">Your dreams</h2><p>I hope you get to chase every one of them and surprise yourself.</p></div><div class="collage two"><div class="photo-slot" data-photo="dreams">ADD A PHOTO THAT FEELS LIKE YOU</div><div class="photo-slot" data-photo="dreams-2">ADD A HAPPY MEMORY</div></div><span class="corner-doodle">✦</span></article>
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">09</span><h2 class="reason-title">Your presence</h2><p>Things just feel a little better when you're around.</p></div><div class="collage one"><div class="photo-slot" data-photo="presence">ADD A FAVOURITE PHOTO TOGETHER</div></div><span class="corner-doodle">♡</span></article>
+<article class="reason-panel final-reason"><div class="reason-copy"><span class="reason-number">10</span><h2 class="reason-title">Simply being you</h2><p>No extra reason needed. You're enough, exactly as you are.</p></div><div class="collage one"><div class="photo-slot" data-photo="you">YOUR MOST SPECIAL PHOTO HERE ♡</div></div><p class="final-line">I love you, Sana. ♡</p></article>
+</div>
+<div class="footer-doodle"><span>and a little wave from Snoopy</span><svg class="dog" viewBox="0 0 190 170" role="img" aria-label="A little beagle waving goodbye"><g class="stroke"><ellipse class="fur" cx="80" cy="137" rx="39" ry="19"/><path class="fur" d="M54 122Q47 101 60 84Q72 69 94 77Q115 83 119 106L110 132Q84 145 60 133Z"/><path class="fur" d="M74 83Q59 63 68 42Q77 18 105 22Q135 25 139 50Q141 73 120 88Q97 101 74 83Z"/><path class="black" d="M76 34Q51 20 44 49Q39 76 65 90Q75 91 80 78Q63 60 76 34Z"/><ellipse class="black" cx="123" cy="65" rx="5" ry="4"/><path fill="none" d="M112 75q-10 9 -20 0"/><path class="fur" d="M108 96q19-3 26-20q4-12 13-17q10-1 8 12q-3 24-33 40"/></g></svg></div>
+<p class="photo-help">Every photo space is ready for Sana's real pictures — smile photo for “Your smile”, eye close-up for “Your eyes”, and so on.</p>
+</section>
+</main>
+<script>
+const $=(selector,root=document)=>root.querySelector(selector);
+const $$=(selector,root=document)=>Array.from(root.querySelectorAll(selector));
+const progress=$("#progress");
+function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max>0?scrollY/max*100:0)+"%"}
+addEventListener("scroll",updateProgress,{passive:true});addEventListener("resize",updateProgress);updateProgress();
+$("#accept").addEventListener("click",()=>{ $("#invite-message").textContent="YAY! Snoopy is doing a happy little dance. ♡";$("#accept").textContent="accepted! ♡";$("#decline").hidden=true;});
+$("#decline").addEventListener("click",()=>{$("#invite-message").textContent="That's okay — Snoopy will wait with the surprise. ♡";});
+$$(".date-choice").forEach(button=>button.addEventListener("click",()=>{$$(".date-choice").forEach(item=>item.setAttribute("aria-pressed","false"));button.setAttribute("aria-pressed","true");$("#date-message").textContent="You picked November "+button.dataset.date+" ♡";}));
+function blowCandle(){const flame=$("#flame");if(flame.classList.contains("out"))return;flame.classList.add("out");$("#cake-caption").textContent="snoopy says your wish is on its way ♡";$("#wish-message").textContent="May this year bring you everything your heart is wishing for. ✨";}
+$("#cake").addEventListener("click",blowCandle);$("#cake").addEventListener("keydown",event=>{if(event.key==="Enter"||event.key===" "){event.preventDefault();blowCandle();}});
+</script>
+</body>
+</html>
