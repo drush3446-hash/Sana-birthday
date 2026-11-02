@@ -56,7 +56,7 @@ test("the ten-things chapter has a styled responsive keepsake gallery and kitten
 });
 
 test("the ten-things gallery uses both supplied floral and cherry artwork with varied crops", () => {
-  assert.equal((html.match(/class="photo-slot art-slot/g) || []).length, 17);
+  assert.equal((html.match(/class="photo-slot art-slot/g) || []).length, 18);
   assert.ok(html.includes("Acgtt98b3UwVsR1HmHYa/image.jpg"));
   assert.ok(html.includes("qVMMYcIevBIRKaslLMWM/image.jpg"));
   assert.match(html, /reason-panel:nth-child\(2\).*?border-radius:50%/s);
