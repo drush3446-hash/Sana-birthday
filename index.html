@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff5f7">
+<meta name="description" content="A little birthday universe made with love for Sana.">
+<title>For Sana ♡ Happy Birthday</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#d75e82;--deep:#853c59;--ink:#432d38;--muted:#8c707b;--cream:#fff9f6;--pink:#fde8ed;--line:#f2d7df;--gold:#c79c63}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}button{font:inherit}.grain{position:fixed;inset:0;pointer-events:none;opacity:.12;z-index:5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E")}
+.hero{min-height:100svh;position:relative;display:grid;place-items:center;text-align:center;padding:90px 22px 80px;background:radial-gradient(ellipse at 50% 42%,#fff 0,#fff7f8 44%,#fbe8ed 100%);isolation:isolate;overflow:hidden}
+.orb{position:absolute;border:1px solid #edcbd5;border-radius:50%;width:min(75vw,700px);aspect-ratio:1;z-index:-1;opacity:.65}.orb:before,.orb:after{content:"";position:absolute;border:1px solid #edcbd5;border-radius:50%;inset:8%}.orb:after{inset:17%}
+.corner{position:absolute;color:#d98ca2;font-family:serif;font-size:clamp(42px,8vw,90px);opacity:.42}.c1{top:7%;left:7%;transform:rotate(-18deg)}.c2{right:8%;bottom:9%;transform:rotate(18deg)}
+.topline{font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:var(--rose);font-weight:700;margin-bottom:28px}.eyebrow{font-family:"Playfair Display",serif;font-style:italic;color:#b8798d;font-size:clamp(17px,2vw,22px);margin:0 0 10px}
+h1,h2,h3,p{margin-top:0}h1{font:600 clamp(56px,11vw,116px)/.96 "Playfair Display",serif;letter-spacing:-.055em;margin:0;color:#62384a}h1 span{display:block;font-style:italic;color:var(--rose);font-weight:500}.hero-copy{max-width:470px;margin:26px auto 30px;color:var(--muted);font-size:15px;line-height:1.85}
+.primary{border:0;border-radius:99px;background:var(--deep);color:white;padding:15px 25px;cursor:pointer;box-shadow:0 10px 25px #853c5926;transition:.25s;letter-spacing:.02em}.primary:hover{transform:translateY(-3px);box-shadow:0 14px 30px #853c5935}.tiny-note{margin-top:17px;color:#b08c98;font-size:11px;letter-spacing:.12em}
+.scroll{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#b78b98}
+.petals{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:-1}.petal{position:absolute;top:-30px;width:11px;height:16px;border-radius:80% 10% 80% 10%;background:#e9a9ba;opacity:.5;animation:fall linear infinite}.petal:nth-child(3n){background:#f3c6d0;width:8px;height:12px}.petal:nth-child(4n){background:#d88ba2}
+@keyframes fall{to{transform:translate3d(60px,110vh,0) rotate(650deg)}}
+section{padding:100px 22px}.wrap{width:min(100%,980px);margin:auto}.section-kicker{text-align:center;color:var(--rose);font-size:10px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;margin-bottom:14px}.section-title{text-align:center;font:500 clamp(34px,6vw,58px)/1.12 "Playfair Display",serif;letter-spacing:-.03em;color:#60394a;margin-bottom:16px}.section-sub{text-align:center;color:var(--muted);font-size:14px;line-height:1.8;max-width:500px;margin:0 auto 48px}
+.note-card{max-width:700px;margin:auto;padding:clamp(28px,6vw,58px);background:#fff;border:1px solid var(--line);box-shadow:0 24px 70px #7b3e5710;border-radius:5px 5px 5px 5px;position:relative}.note-card:before{content:"";position:absolute;inset:10px;border:1px solid #f7e6eb;pointer-events:none}.note-card .date{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#bf8b9b;margin-bottom:26px}.note-card h3{font:italic 32px "Playfair Display",serif;color:var(--rose);margin-bottom:20px}.note-card p{font:16px/2 "Playfair Display",serif;color:#755565}.signature{font:italic 22px "Playfair Display",serif;color:#b65e7d;margin-top:24px}
+.cake-area{background:linear-gradient(180deg,#fff6f7,#fcecf0)}.cake-wrap{display:grid;place-items:center;min-height:240px}.cake{position:relative;width:190px;height:145px;cursor:pointer;filter:drop-shadow(0 18px 12px #9a58721c)}.cake-base{position:absolute;bottom:0;width:190px;height:83px;background:linear-gradient(90deg,#eaa8b7,#f7d3d9 48%,#e99eb1);border-radius:14px 14px 24px 24px}.cake-base:before{content:"";position:absolute;top:0;left:0;width:100%;height:20px;background:#fff0f1;border-radius:50%}.icing{position:absolute;bottom:62px;left:0;width:190px;height:38px;background:#fff5f1;border-radius:50% 50% 12px 12px}.icing:after{content:"";position:absolute;left:22px;top:20px;width:15px;height:22px;background:#fff5f1;border-radius:0 0 12px 12px;box-shadow:44px 4px #fff5f1,91px -1px #fff5f1,139px 5px #fff5f1}.candle{position:absolute;bottom:96px;left:87px;width:16px;height:43px;border-radius:5px;background:repeating-linear-gradient(135deg,#fff 0 6px,#e88ca4 6px 12px)}.flame{position:absolute;left:88px;bottom:137px;width:14px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:radial-gradient(circle at 65% 65%,#fff4a8 0 18%,#ffb64d 45%,#f47a57 75%);box-shadow:0 0 22px #ffb64d;animation:flicker .7s infinite alternate;transform-origin:bottom}.flame.off{display:none}@keyframes flicker{to{transform:rotate(-39deg) scale(.9)}}
+.cake-hint{text-align:center;color:#9b7784;font-size:12px;margin-top:18px}.wish{display:none;text-align:center;font:italic 25px "Playfair Display",serif;color:var(--rose);margin-top:20px}.wish.show{display:block;animation:pop .5s both}@keyframes pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.memory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.memory{min-height:210px;border-radius:4px;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;background:linear-gradient(145deg,#f8dfe6,#edb8c7)}.memory:nth-child(2){background:linear-gradient(145deg,#f7eadc,#e9c6b4)}.memory:nth-child(3){background:linear-gradient(145deg,#e9e3ed,#cdbbd8)}.memory:before{content:"✿";position:absolute;top:12px;right:18px;font-size:75px;color:#fff8;transform:rotate(18deg)}.memory small{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#895d6c}.memory strong{font:italic 24px "Playfair Display",serif;color:#62384a;margin-top:6px}.memory span{font-size:11px;color:#815d6b;margin-top:6px}
+.final{background:#62384a;color:white;text-align:center;position:relative;overflow:hidden}.final .section-kicker{color:#f4b6c7}.final .section-title{color:#fff}.final p{color:#f1dce3;line-height:1.9;font-size:14px;max-width:480px;margin:0 auto 28px}.final .primary{background:#fff;color:#763e56}.heart{font-size:26px;color:#f2aabd;animation:beat 1.2s infinite}@keyframes beat{50%{transform:scale(1.2)}}
+footer{text-align:center;padding:24px;color:#b38c9b;background:#fff7f8;font-size:10px;letter-spacing:.14em}
+@media(max-width:650px){section{padding:74px 18px}.memory-grid{grid-template-columns:1fr}.memory{min-height:150px}.corner{font-size:48px}.hero-copy{font-size:14px}.note-card p{font-size:15px}.topline{font-size:9px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<header class="hero" id="top">
+ <div class="orb"></div><div class="petals" id="petals"></div><div class="corner c1">✿</div><div class="corner c2">❀</div>
+ <div>
+  <div class="topline">A little universe, made just for you</div>
+  <p class="eyebrow">To the girl who makes ordinary days feel magical</p>
+  <h1>Happy Birthday<span>Sana ♡</span></h1>
+  <p class="hero-copy">Today deserves more than a simple wish. So I made you a tiny corner of the internet, filled with soft colours, little surprises, and a whole lot of love.</p>
+  <button class="primary" id="openBtn">Open your little surprise <span>↗</span></button>
+  <div class="tiny-note">MADE WITH LOVE · JUST FOR YOU</div>
+ </div>
+ <div class="scroll">Scroll for a little more ↓</div>
+</header>
+<main>
+<section id="letter">
+ <div class="wrap">
+  <div class="section-kicker">A note from my heart</div>
+  <h2 class="section-title">A little letter for you</h2>
+  <p class="section-sub">Some feelings are too lovely to fit inside a simple “happy birthday”.</p>
+  <article class="note-card">
+   <div class="date">A special day · A special girl</div>
+   <h3>Dear Sana,</h3>
+   <p>Some people bring their own kind of sunshine wherever they go. I hope you never forget how special you are, how much beauty you bring into little moments, and how deserving you are of every good thing life has to offer.</p>
+   <p>May this new year of your life be gentle with your heart, generous with its surprises, and full of reasons to smile. Keep dreaming big, keep being wonderfully you, and never let the world make you feel any less than extraordinary.</p>
+   <p>Today, I hope you feel celebrated — not just for the day you were born, but for the person you are every single day.</p>
+   <div class="signature">With all my love ♡</div>
+  </article>
+ </div>
+</section>
+<section class="cake-area" id="wish">
+ <div class="wrap">
+  <div class="section-kicker">Make a wish</div>
+  <h2 class="section-title">One candle. A thousand wishes.</h2>
+  <p class="section-sub">Close your eyes, make your sweetest wish, then tap the candle to blow it out.</p>
+  <div class="cake-wrap"><div class="cake" id="cake" role="button" tabindex="0" aria-label="Tap to blow out the candle"><div class="flame" id="flame"></div><div class="candle"></div><div class="icing"></div><div class="cake-base"></div></div></div>
+  <div class="cake-hint" id="cakeHint">Psst… the candle is waiting for you ✨</div>
+  <div class="wish" id="wishText">May every beautiful wish find its way to you, Sana. ♡</div>
+ </div>
+</section>
+<section id="little-things">
+ <div class="wrap">
+  <div class="section-kicker">A few reminders</div>
+  <h2 class="section-title">Things I hope you never forget</h2>
+  <p class="section-sub">Little truths, wrapped up like tiny gifts.</p>
+  <div class="memory-grid">
+   <div class="memory"><small>01 · Always</small><strong>You are enough.</strong><span>Exactly as you are, right now.</span></div>
+   <div class="memory"><small>02 · Remember</small><strong>Your smile matters.</strong><span>Never stop finding reasons to use it.</span></div>
+   <div class="memory"><small>03 · Keep going</small><strong>Your dreams are waiting.</strong><span>May you surprise yourself this year.</span></div>
+  </div>
+ </div>
+</section>
+<section class="final">
+ <div class="wrap">
+  <div class="section-kicker">And one last thing…</div>
+  <h2 class="section-title">The world is sweeter<br><em>with you in it.</em></h2>
+  <p>Happy Birthday, Sana. May your days be sprinkled with magic, your heart stay light, and your next chapter be your prettiest one yet.</p>
+  <div class="heart">♥</div>
+  <p style="font-family:'Playfair Display',serif;font-style:italic;margin-top:14px">Here's to you, today and always.</p>
+  <button class="primary" id="againBtn">Read your letter again ↗</button>
+ </div>
+</section>
+</main>
+<footer>CRAFTED WITH ♡ FOR SANA · HAPPY BIRTHDAY</footer>
+<script>
+const petals=document.getElementById('petals');
+for(let i=0;i<24;i++){const p=document.createElement('i');p.className='petal';p.style.left=(Math.random()*100)+'%';p.style.animationDuration=(9+Math.random()*12)+'s';p.style.animationDelay=(-Math.random()*18)+'s';p.style.opacity=(.2+Math.random()*.45);petals.appendChild(p)}
+document.getElementById('openBtn').addEventListener('click',()=>document.getElementById('letter').scrollIntoView({behavior:'smooth'}));
+document.getElementById('againBtn').addEventListener('click',()=>document.getElementById('letter').scrollIntoView({behavior:'smooth'}));
+function blow(){const f=document.getElementById('flame');if(f.classList.contains('off'))return;f.classList.add('off');document.getElementById('cakeHint').textContent='Wish sent to the universe ✨';document.getElementById('wishText').classList.add('show');}
+document.getElementById('cake').addEventListener('click',blow);document.getElementById('cake').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();blow()}});
+</script>
+</body></html>
