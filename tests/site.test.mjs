@@ -31,7 +31,7 @@ test("Android-first mobile layout has viewport, safe-area spacing, touch targets
   assert.match(html, /name="viewport"[^>]*width=device-width/);
   assert.match(html, /env\(safe-area-inset-bottom/);
   assert.match(html, /@media\(max-width:760px\)/);
-  assert.match(html, /min-height:\\s*48px/);
+  assert.match(html, /min-height:\s*48px/);
   assert.match(html, /overflow-x:\s*hidden/);
   assert.match(html, /scroll-margin-top/);
   assert.match(html, /font-size:\s*clamp\(/);
