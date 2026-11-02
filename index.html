@@ -249,6 +249,70 @@ button{font:inherit}
  .reason-panel:has(.reason-number)::after{width:28px;height:25px}
 }
 
+
+/* Distinct photo-art treatments for the ten keepsake reasons */
+.reasons-page{background:radial-gradient(circle at 8% 14%,#f6dfe8 0,transparent 24%),radial-gradient(circle at 94% 60%,#dcebf4 0,transparent 27%),#fffaf2}
+.reason-list{max-width:1120px;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px}
+.reason-panel,.reason-panel:nth-child(even){display:flex;flex-direction:column;align-items:stretch;gap:14px;min-height:360px;padding:20px;border-radius:7px}
+.reason-panel:nth-child(1){background:#fff7f1;transform:rotate(-.5deg)}
+.reason-panel:nth-child(2){background:#eff6fa;transform:rotate(.5deg)}
+.reason-panel:nth-child(3){background:#fff0f4}
+.reason-panel:nth-child(4){background:#f3f0e7;transform:rotate(.4deg)}
+.reason-panel:nth-child(5){background:#edf4ee}
+.reason-panel:nth-child(6){background:#f9eaf0;transform:rotate(-.4deg)}
+.reason-panel:nth-child(7){background:#eef3fa}
+.reason-panel:nth-child(8){background:#fff5e8;transform:rotate(.4deg)}
+.reason-panel:nth-child(9){background:#f5edf8}
+.reason-copy{width:100%;text-align:left;order:0!important}
+.reason-number{font-size:47px;display:inline-block;margin-right:10px;vertical-align:middle}
+.reason-title{display:inline-block;vertical-align:middle;margin:0;font-size:clamp(22px,2.4vw,30px)}
+.reason-copy p{margin:10px 0 0;max-width:32em;font-size:14px;line-height:1.65}
+.collage{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;order:1!important}
+.collage.one{grid-template-columns:1fr}
+.collage.three{grid-template-columns:1.3fr 1fr 1fr}
+.art-slot{position:relative;overflow:hidden;min-height:160px;padding:0!important;border:7px solid #fffdf8!important;border-bottom-width:18px!important;border-radius:3px!important;background:#fff!important;box-shadow:0 7px 18px #50677b20!important;transform:rotate(-1.3deg)}
+.art-slot:nth-child(even){transform:rotate(1.8deg)}
+.art-slot img{display:block;width:100%;height:100%;min-height:inherit;object-fit:cover;transition:transform .45s ease}
+.art-slot:hover img{transform:scale(1.06)}
+.collage.one .art-slot{min-height:210px;aspect-ratio:16/9}
+.collage.two .art-slot{min-height:145px;aspect-ratio:1/1}
+.collage.three .art-slot{min-height:150px;aspect-ratio:3/4}
+.collage.three .art-slot:first-child{min-height:195px}
+.art-crop-1 img{object-position:12% 10%}.art-crop-2 img{object-position:88% 12%}
+.art-crop-3 img{object-position:50% 50%}.art-crop-4 img{object-position:18% 88%}
+.art-crop-5 img{object-position:82% 85%}
+.reason-panel:nth-child(1) .collage.one .art-slot{aspect-ratio:16/8}
+.reason-panel:nth-child(2) .collage.two .art-slot{border-radius:50%!important;aspect-ratio:1}
+.reason-panel:nth-child(3) .collage.three .art-slot:first-child{grid-row:span 2;min-height:220px}
+.reason-panel:nth-child(4) .collage.two .art-slot:first-child{transform:rotate(-4deg)}
+.reason-panel:nth-child(5) .collage.one .art-slot{aspect-ratio:4/3}
+.reason-panel:nth-child(6) .collage.two .art-slot{aspect-ratio:5/4}
+.reason-panel:nth-child(7) .collage.three .art-slot{border-radius:45% 45% 4px 4px!important}
+.reason-panel:nth-child(8) .collage.two .art-slot:first-child{aspect-ratio:4/5}
+.reason-panel:nth-child(9) .collage.one .art-slot{aspect-ratio:5/3}
+.reason-panel.final-reason{grid-column:1/-1;display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;gap:18px;background:linear-gradient(120deg,#f8e3e7,#fff5e8 55%,#e7f0f5);padding:28px;border:1px solid #d8b8bc;min-height:0}
+.final-reason .reason-copy{grid-column:1;grid-row:1}
+.final-reason .collage{grid-column:2;grid-row:1}
+.final-reason .collage.one .art-slot{min-height:240px;aspect-ratio:4/3}
+.final-line{grid-column:1/-1;margin:0;text-align:center;font-size:clamp(30px,4vw,45px)}
+.reasons-head{background:#fffdf4d9;border:1px solid #e1cdd0;border-radius:8px;padding:28px 20px;box-shadow:0 12px 30px #647e9012}
+.footer-doodle{background:#fffdf4}
+@media(max-width:760px){
+ .reasons-page{padding:72px 12px 54px}
+ .reason-list{grid-template-columns:1fr;gap:17px}
+ .reason-panel,.reason-panel:nth-child(even){min-height:0;padding:17px;transform:none}
+ .reason-number{font-size:42px}
+ .reason-title{font-size:25px}
+ .collage.one .art-slot{min-height:190px}
+ .collage.two .art-slot{min-height:125px}
+ .collage.three .art-slot{min-height:125px}
+ .collage.three .art-slot:first-child{min-height:175px}
+ .reason-panel.final-reason{grid-column:auto;grid-template-columns:1fr;padding:19px}
+ .final-reason .reason-copy,.final-reason .collage{grid-column:1;grid-row:auto}
+ .final-reason .collage.one .art-slot{min-height:190px}
+ .final-line{grid-column:1;font-size:32px}
+}
+
 </style>
 </head>
 <body>
@@ -330,16 +394,16 @@ button{font:inherit}
 <section class="reasons-page" id="reasons" aria-label="Ten things I love about you">
 <header class="reasons-head"><p class="eyebrow">A LIST THAT COULD GO ON FOREVER</p><h1>10 THINGS I LOVE<br><em>ABOUT YOU</em></h1><p>Ten little reasons. A million more waiting to be written. ♡</p></header>
 <div class="reason-list">
-<article class="reason-panel"><div class="reason-copy"><span class="reason-number">01</span><h2 class="reason-title">Your smile</h2><p>It makes even an ordinary day feel softer and brighter.</p></div><div class="collage one"><div class="photo-slot" data-photo="smile">ADD SANA'S SMILE PHOTO</div></div><span class="corner-doodle">♡</span></article>
-<article class="reason-panel"><div class="reason-copy"><span class="reason-number">02</span><h2 class="reason-title">Your eyes</h2><p>There's a whole little universe in the way your eyes shine.</p></div><div class="collage two"><div class="photo-slot" data-photo="eyes">ADD EYES CLOSE-UP</div><div class="photo-slot" data-photo="eyes-2">ADD ANOTHER EYES PHOTO</div></div><span class="corner-doodle">✧</span></article>
-<article class="reason-panel"><div class="reason-copy"><span class="reason-number">03</span><h2 class="reason-title">Your laugh</h2><p>The kind of laugh that makes everyone around you smile too.</p></div><div class="collage three"><div class="photo-slot" data-photo="laugh">ADD LAUGHING PHOTO</div><div class="photo-slot" data-photo="laugh-2">ADD CANDID</div><div class="photo-slot" data-photo="laugh-3">ADD A FUN MOMENT</div></div><span class="corner-doodle">♡</span></article>
-<article class="reason-panel"><div class="reason-copy"><span class="reason-number">04</span><h2 class="reason-title">Your kind heart</h2><p>The care you give, even in the smallest things, means so much.</p></div><div class="collage two"><div class="photo-slot" data-photo="heart">ADD A FAVOURITE MOMENT</div><div class="photo-slot" data-photo="heart-2">ADD A MEMORY</div></div><span class="corner-doodle">✿</span></article>
-<article class="reason-panel"><div class="reason-copy"><span class="reason-number">05</span><h2 class="reason-title">Your little habits</h2><p>All those tiny things that make you unmistakably you.</p></div><div class="collage one"><div class="photo-slot" data-photo="habits">ADD A NATURAL CANDID</div></div><span class="corner-doodle">♡</span></article>
-<article class="reason-panel"><div class="reason-copy"><span class="reason-number">06</span><h2 class="reason-title">Your strength</h2><p>You keep moving forward, even on the days that ask a lot from you.</p></div><div class="collage two"><div class="photo-slot" data-photo="strength">ADD A PHOTO YOU LOVE</div><div class="photo-slot" data-photo="strength-2">ADD ANOTHER MEMORY</div></div><span class="corner-doodle">✧</span></article>
-<article class="reason-panel"><div class="reason-copy"><span class="reason-number">07</span><h2 class="reason-title">Your voice</h2><p>Somehow, even the simplest conversations become favourite memories.</p></div><div class="collage three"><div class="photo-slot" data-photo="voice">ADD A PORTRAIT</div><div class="photo-slot" data-photo="voice-2">ADD A MOMENT</div><div class="photo-slot" data-photo="voice-3">ADD A CANDID</div></div><span class="corner-doodle">♡</span></article>
-<article class="reason-panel"><div class="reason-copy"><span class="reason-number">08</span><h2 class="reason-title">Your dreams</h2><p>I hope you get to chase every one of them and surprise yourself.</p></div><div class="collage two"><div class="photo-slot" data-photo="dreams">ADD A PHOTO THAT FEELS LIKE YOU</div><div class="photo-slot" data-photo="dreams-2">ADD A HAPPY MEMORY</div></div><span class="corner-doodle">✦</span></article>
-<article class="reason-panel"><div class="reason-copy"><span class="reason-number">09</span><h2 class="reason-title">Your presence</h2><p>Things just feel a little better when you're around.</p></div><div class="collage one"><div class="photo-slot" data-photo="presence">ADD A FAVOURITE PHOTO TOGETHER</div></div><span class="corner-doodle">♡</span></article>
-<article class="reason-panel final-reason"><div class="reason-copy"><span class="reason-number">10</span><h2 class="reason-title">Simply being you</h2><p>No extra reason needed. You're enough, exactly as you are.</p></div><div class="collage one"><div class="photo-slot" data-photo="you">YOUR MOST SPECIAL PHOTO HERE ♡</div></div><p class="final-line">I love you, Sana. ♡</p></article>
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">01</span><h2 class="reason-title">Your smile</h2><p>It makes even an ordinary day feel softer and brighter.</p></div><div class="collage one"><div class="photo-slot art-slot art-crop-1" data-photo="smile" data-art="floral"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/Acgtt98b3UwVsR1HmHYa/image.jpg" alt="Floral artwork from your shared flower sheet" loading="lazy" decoding="async"></div></div><span class="corner-doodle">♡</span></article>
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">02</span><h2 class="reason-title">Your eyes</h2><p>There's a whole little universe in the way your eyes shine.</p></div><div class="collage two"><div class="photo-slot art-slot art-crop-2" data-photo="eyes" data-art="floral"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/Acgtt98b3UwVsR1HmHYa/image.jpg" alt="Floral artwork from your shared flower sheet" loading="lazy" decoding="async"></div><div class="photo-slot art-slot art-crop-3" data-photo="eyes-2" data-art="cherry"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/qVMMYcIevBIRKaslLMWM/image.jpg" alt="Cute cherry-themed sticker artwork from your shared sticker sheet" loading="lazy" decoding="async"></div></div><span class="corner-doodle">✧</span></article>
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">03</span><h2 class="reason-title">Your laugh</h2><p>The kind of laugh that makes everyone around you smile too.</p></div><div class="collage three"><div class="photo-slot art-slot art-crop-4" data-photo="laugh" data-art="cherry"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/qVMMYcIevBIRKaslLMWM/image.jpg" alt="Cute cherry-themed sticker artwork from your shared sticker sheet" loading="lazy" decoding="async"></div><div class="photo-slot art-slot art-crop-5" data-photo="laugh-2" data-art="floral"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/Acgtt98b3UwVsR1HmHYa/image.jpg" alt="Floral artwork from your shared flower sheet" loading="lazy" decoding="async"></div><div class="photo-slot art-slot art-crop-1" data-photo="laugh-3" data-art="cherry"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/qVMMYcIevBIRKaslLMWM/image.jpg" alt="Cute cherry-themed sticker artwork from your shared sticker sheet" loading="lazy" decoding="async"></div></div><span class="corner-doodle">♡</span></article>
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">04</span><h2 class="reason-title">Your kind heart</h2><p>The care you give, even in the smallest things, means so much.</p></div><div class="collage two"><div class="photo-slot art-slot art-crop-2" data-photo="heart" data-art="cherry"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/qVMMYcIevBIRKaslLMWM/image.jpg" alt="Cute cherry-themed sticker artwork from your shared sticker sheet" loading="lazy" decoding="async"></div><div class="photo-slot art-slot art-crop-3" data-photo="heart-2" data-art="floral"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/Acgtt98b3UwVsR1HmHYa/image.jpg" alt="Floral artwork from your shared flower sheet" loading="lazy" decoding="async"></div></div><span class="corner-doodle">✿</span></article>
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">05</span><h2 class="reason-title">Your little habits</h2><p>All those tiny things that make you unmistakably you.</p></div><div class="collage one"><div class="photo-slot art-slot art-crop-4" data-photo="habits" data-art="cherry"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/qVMMYcIevBIRKaslLMWM/image.jpg" alt="Cute cherry-themed sticker artwork from your shared sticker sheet" loading="lazy" decoding="async"></div></div><span class="corner-doodle">♡</span></article>
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">06</span><h2 class="reason-title">Your strength</h2><p>You keep moving forward, even on the days that ask a lot from you.</p></div><div class="collage two"><div class="photo-slot art-slot art-crop-5" data-photo="strength" data-art="cherry"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/qVMMYcIevBIRKaslLMWM/image.jpg" alt="Cute cherry-themed sticker artwork from your shared sticker sheet" loading="lazy" decoding="async"></div><div class="photo-slot art-slot art-crop-1" data-photo="strength-2" data-art="floral"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/Acgtt98b3UwVsR1HmHYa/image.jpg" alt="Floral artwork from your shared flower sheet" loading="lazy" decoding="async"></div></div><span class="corner-doodle">✧</span></article>
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">07</span><h2 class="reason-title">Your voice</h2><p>Somehow, even the simplest conversations become favourite memories.</p></div><div class="collage three"><div class="photo-slot art-slot art-crop-2" data-photo="voice" data-art="cherry"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/qVMMYcIevBIRKaslLMWM/image.jpg" alt="Cute cherry-themed sticker artwork from your shared sticker sheet" loading="lazy" decoding="async"></div><div class="photo-slot art-slot art-crop-3" data-photo="voice-2" data-art="cherry"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/qVMMYcIevBIRKaslLMWM/image.jpg" alt="Cute cherry-themed sticker artwork from your shared sticker sheet" loading="lazy" decoding="async"></div><div class="photo-slot art-slot art-crop-4" data-photo="voice-3" data-art="floral"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/Acgtt98b3UwVsR1HmHYa/image.jpg" alt="Floral artwork from your shared flower sheet" loading="lazy" decoding="async"></div></div><span class="corner-doodle">♡</span></article>
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">08</span><h2 class="reason-title">Your dreams</h2><p>I hope you get to chase every one of them and surprise yourself.</p></div><div class="collage two"><div class="photo-slot art-slot art-crop-5" data-photo="dreams" data-art="cherry"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/qVMMYcIevBIRKaslLMWM/image.jpg" alt="Cute cherry-themed sticker artwork from your shared sticker sheet" loading="lazy" decoding="async"></div><div class="photo-slot art-slot art-crop-1" data-photo="dreams-2" data-art="cherry"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/qVMMYcIevBIRKaslLMWM/image.jpg" alt="Cute cherry-themed sticker artwork from your shared sticker sheet" loading="lazy" decoding="async"></div></div><span class="corner-doodle">✦</span></article>
+<article class="reason-panel"><div class="reason-copy"><span class="reason-number">09</span><h2 class="reason-title">Your presence</h2><p>Things just feel a little better when you're around.</p></div><div class="collage one"><div class="photo-slot art-slot art-crop-2" data-photo="presence" data-art="floral"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/Acgtt98b3UwVsR1HmHYa/image.jpg" alt="Floral artwork from your shared flower sheet" loading="lazy" decoding="async"></div></div><span class="corner-doodle">♡</span></article>
+<article class="reason-panel final-reason"><div class="reason-copy"><span class="reason-number">10</span><h2 class="reason-title">Simply being you</h2><p>No extra reason needed. You're enough, exactly as you are.</p></div><div class="collage one"><div class="photo-slot art-slot art-crop-3" data-photo="you" data-art="cherry"><img src="https://plain-apac-prod-public.komododecks.com/202611/02/qVMMYcIevBIRKaslLMWM/image.jpg" alt="Cute cherry-themed sticker artwork from your shared sticker sheet" loading="lazy" decoding="async"></div></div><p class="final-line">I love you, Sana. ♡</p></article>
 </div>
 <div class="footer-doodle"><span>and a little wave from Kitty</span><div class="cat-mascot cat-1" role="img" aria-label="Cute kitten sticker"></div></div>
 <p class="photo-help">Every photo space is ready for Sana's real pictures — smile photo for “Your smile”, eye close-up for “Your eyes”, and so on.</p>
