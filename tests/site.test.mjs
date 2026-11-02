@@ -27,3 +27,13 @@ test("interactive controls and responsive layout are wired", () => {
   assert.match(html, /@media\(max-width:760px\)/);
   assert.match(html, /prefers-reduced-motion/);
 });
+test("Android-first mobile layout has viewport, safe-area spacing, touch targets and overflow protection", () => {
+  assert.match(html, /name="viewport"[^>]*width=device-width/);
+  assert.match(html, /env\(safe-area-inset-bottom/);
+  assert.match(html, /@media\(max-width:760px\)/);
+  assert.match(html, /min-height:\s*44px/);
+  assert.match(html, /overflow-x:\s*hidden/);
+  assert.match(html, /scroll-margin-top/);
+  assert.match(html, /font-size:\s*clamp\(/);
+  assert.match(html, /-webkit-tap-highlight-color/);
+});
