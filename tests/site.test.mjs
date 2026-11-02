@@ -37,3 +37,11 @@ test("Android-first mobile layout has viewport, safe-area spacing, touch targets
   assert.match(html, /font-size:\s*clamp\(/);
   assert.match(html, /-webkit-tap-highlight-color/);
 });
+
+test("the Snoopy mascot is replaced by the supplied kitten sticker artwork", () => {
+  assert.doesNotMatch(html, /class="dog/);
+  assert.equal((html.match(/class="cat-mascot/g) || []).length, 5);
+  assert.match(html, /assets\/cat-stickers\.webp/);
+  assert.match(html, /kitty wants to deliver a message!/);
+  assert.doesNotMatch(html, /Snoopy|snoopy|beagle/i);
+});
