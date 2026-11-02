@@ -55,11 +55,14 @@ test("the ten-things chapter has a styled responsive keepsake gallery and kitten
   assert.equal((html.match(/<article class="reason-panel(?: final-reason)?">/g) || []).length, 10);
 });
 
-test("the ten-things gallery uses both supplied floral and cherry artwork with varied crops", () => {
-  assert.equal((html.match(/class="photo-slot art-slot/g) || []).length, 18);
-  assert.ok(html.includes("Acgtt98b3UwVsR1HmHYa/image.jpg"));
-  assert.ok(html.includes("qVMMYcIevBIRKaslLMWM/image.jpg"));
-  assert.match(html, /reason-panel:nth-child\(2\).*?border-radius:50%/s);
-  assert.match(html, /reason-panel.final-reason/);
+test("the ten-things section keeps Sana photo slots empty and uses supplied artwork only as side decorations", () => {
+  const reasons = html.split('<section class="reasons-page"')[1].split('</section>')[0];
+  assert.equal((reasons.match(/class="photo-slot art-slot/g) || []).length, 18);
+  assert.equal((reasons.match(/class="photo-slot art-slot[^"]*"[^>]*><span class="photo-placeholder">/g) || []).length, 18);
+  assert.doesNotMatch(reasons, /<img\s+src="https:\/\/plain-apac-prod-public\.komododecks\.com/);
+  assert.match(html, /reason-panel:has\(\.reason-number\)::after/);
+  assert.match(html, /Acgtt98b3UwVsR1HmHYa\/image\.jpg/);
+  assert.match(html, /qVMMYcIevBIRKaslLMWM\/image\.jpg/);
+  assert.match(html, /reason-panel:nth-child\(even\):has\(\.reason-number\)::after/);
   assert.match(html, /@media\(max-width:760px\)/);
 });
