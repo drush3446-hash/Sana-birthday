@@ -1,14 +1,21 @@
-# Sana Birthday 💗
+# Sana's Birthday Scrapbook ♡
 
-A dreamy, floral birthday surprise page made for Sana.
+A multi-page, Snoopy-inspired pastel birthday website based on the supplied Pinterest reference. The visual direction uses baby blue, cream paper, gingham checks, postage details, scrapbook frames and soft handwritten typography.
 
-## Preview locally
-Open `index.html` in a browser.
+## Pages
+1. `index.html` — welcome cover
+2. `invitation.html` — interactive birthday invitation
+3. `calendar.html` — birthday calendar
+4. `wishes.html` — tap-to-blow birthday cake
+5. `letter.html` — tap-to-open birthday letter
+6. `memories.html` — six scrapbook photo spaces
+7. `things.html` — ten reasons page
+8. `surprise.html` — final birthday message
 
-## Publish with GitHub Pages
-1. Open **Settings → Pages** in this repository.
-2. Under **Build and deployment**, choose **Deploy from a branch**.
-3. Select **main** and **/(root)**, then Save.
-4. Wait for the Pages deployment. The public URL will appear on the Pages settings screen.
+## Personalise before sharing
+- Replace the six photo placeholders in `memories.html` with Sana's actual photos.
+- Confirm her birthday date to customise the calendar.
+- Edit the letter and ten reasons if you want to add personal details.
 
-The page is responsive and uses HTML, CSS, and vanilla JavaScript. Google Fonts are loaded online; the page still works with fallback fonts if they are unavailable.
+## Publish
+GitHub Pages deploys automatically from pushes to `main` using the workflow in `.github/workflows/static.yml`.
