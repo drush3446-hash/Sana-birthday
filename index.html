@@ -339,12 +339,12 @@ button{font:inherit}
 </div></div><div class="page-count">02 / 07</div>
 </section>
 
-<section class="scene pinstripe" id="page-3" aria-label="Page 3, choose a November date">
+<section class="scene pinstripe" id="page-3" aria-label="Page 3, choose a special date">
 <div class="scene-inner">
 <div class="calendar-wrap">
 <div class="calendar-dog">
 <div class="cat-mascot cat-3" role="img" aria-label="Cute kitten sticker"></div><p class="hand">a little date picker ♡</p></div>
-<div class="calendar-card"><p class="month">NOVEMBER</p><div class="dates"><button class="date-choice" data-date="08" aria-pressed="false"><strong>08</strong><small>NOV</small></button><button class="date-choice" data-date="26" aria-pressed="false"><strong>26</strong><small>NOV</small></button></div><p class="selected-date" id="date-message" aria-live="polite">choose the date that feels right</p></div>
+<div class="calendar-card"><p class="month">SPECIAL DATES ♡</p><div class="dates"><button class="date-choice" data-date="08" data-month="November" aria-pressed="false"><strong>08</strong><small>NOV</small></button><button class="date-choice" data-date="28" data-month="July" aria-pressed="false"><strong>28</strong><small>JUL</small></button></div><p class="selected-date" id="date-message" aria-live="polite">choose the date that feels right</p></div>
 </div>
 <p class="caption">kitty wants to know what day is today</p>
 <a class="next-link" href="#page-4">next little surprise <span>♡ →</span></a>
@@ -418,7 +418,7 @@ function updateProgress(){const max=document.documentElement.scrollHeight-innerH
 addEventListener("scroll",updateProgress,{passive:true});addEventListener("resize",updateProgress);updateProgress();
 $("#accept").addEventListener("click",()=>{ $("#invite-message").textContent="YAY! Kitty is doing a happy little dance. ♡";$("#accept").textContent="accepted! ♡";$("#decline").hidden=true;});
 $("#decline").addEventListener("click",()=>{$("#invite-message").textContent="That's okay — Kitty will wait with the surprise. ♡";});
-$$(".date-choice").forEach(button=>button.addEventListener("click",()=>{$$(".date-choice").forEach(item=>item.setAttribute("aria-pressed","false"));button.setAttribute("aria-pressed","true");$("#date-message").textContent="You picked November "+button.dataset.date+" ♡";}));
+$$(".date-choice").forEach(button=>button.addEventListener("click",()=>{$$(".date-choice").forEach(item=>item.setAttribute("aria-pressed","false"));button.setAttribute("aria-pressed","true");$("#date-message").textContent="You picked "+button.dataset.date+" "+button.dataset.month+" ♡";}));
 function blowCandle(){const flame=$("#flame");if(flame.classList.contains("out"))return;flame.classList.add("out");$("#cake-caption").textContent="kitty says your wish is on its way ♡";$("#wish-message").textContent="May this year bring you everything your heart is wishing for. ✨";}
 $("#cake").addEventListener("click",blowCandle);$("#cake").addEventListener("keydown",event=>{if(event.key==="Enter"||event.key===" "){event.preventDefault();blowCandle();}});
 </script>
