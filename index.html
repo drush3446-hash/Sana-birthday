@@ -360,6 +360,20 @@ button{font:inherit}
   .round-photo img { object-position: var(--photo-position, 50% 12%); }
 }
 
+
+/* Cute, varied cartoon illustrations for every keepsake section */
+.cartoon-art-tile{position:relative;isolation:isolate;display:grid;place-items:center;width:100%;height:100%;min-height:inherit;overflow:hidden;background:radial-gradient(circle at 18% 18%,#fff 0 7%,transparent 8%),linear-gradient(145deg,#fce9ee,#e5f1f8 58%,#fff3d9)}
+.cartoon-art-tile:before,.cartoon-art-tile:after{content:"";position:absolute;z-index:-1;border-radius:50%;opacity:.7}
+.cartoon-art-tile:before{width:76px;height:76px;left:-18px;bottom:-24px;background:#f5cbd5}
+.cartoon-art-tile:after{width:54px;height:54px;right:-10px;top:-14px;background:#cfe4f1}
+.cartoon-art-tile img{display:block;width:min(64%,150px);height:min(72%,150px);object-fit:contain;filter:drop-shadow(0 8px 7px #526a7e22);position:relative;z-index:1}
+.cartoon-art-tile .art-sparkle{position:absolute;color:#c48b9b;font-size:20px}
+.cartoon-art-tile .art-sparkle.a{top:12%;left:14%}
+.cartoon-art-tile .art-sparkle.b{right:13%;bottom:13%;font-size:15px}
+.polaroid-photo.cartoon-art-tile{min-height:210px}
+.round-photo .photo-slot.cartoon-art-tile{min-height:0;aspect-ratio:1;border:0;border-radius:50%}
+@media(max-width:760px){.cartoon-art-tile img{width:min(66%,125px);height:min(70%,125px)}.polaroid-photo.cartoon-art-tile{min-height:180px}}
+
 </style>
 </head>
 <body>
@@ -468,5 +482,47 @@ $$(".date-choice").forEach(button=>button.addEventListener("click",()=>{$$(".dat
 function blowCandle(){const flame=$("#flame");if(flame.classList.contains("out"))return;flame.classList.add("out");$("#cake-caption").textContent="kitty says your wish is on its way ♡";$("#wish-message").textContent="May this year bring you everything your heart is wishing for. ✨";}
 $("#cake").addEventListener("click",blowCandle);$("#cake").addEventListener("keydown",event=>{if(event.key==="Enter"||event.key===" "){event.preventDefault();blowCandle();}});
 </script>
+
+<script>
+/* Each section gets its own small cartoon sticker illustration — no personal photos needed. */
+(()=>{
+ const cdn="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/";
+ const art={
+  smile:"1f970", eyes:"1f440", "eyes-2":"1f31f",
+  laugh:"1f604", "laugh-2":"1f389", "laugh-3":"1f382",
+  heart:"1f49e", "heart-2":"1f338", habits:"1f43b",
+  strength:"1f98b", "strength-2":"1f31e",
+  voice:"1f3b6", "voice-2":"1f3a4", "voice-3":"1f496",
+  dreams:"1f320", "dreams-2":"1f308", presence:"1f431", you:"1f970"
+ };
+ const labels={
+  smile:"smiling face surrounded by hearts",eyes:"sparkling cartoon eyes","eyes-2":"little shining star",
+  laugh:"happy laughing face","laugh-2":"celebration confetti","laugh-3":"birthday cake",
+  heart:"two sparkling hearts","heart-2":"pink flower",habits:"cute teddy bear",
+  strength:"butterfly","strength-2":"sunshine",voice:"music notes","voice-2":"microphone","voice-3":"heart",
+  dreams:"shooting star","dreams-2":"rainbow",presence:"cute kitten",you:"smiling face with hearts"
+ };
+ function addArt(host,code,label){
+  if(!host || host.dataset.cartoonDone==="yes")return;
+  host.dataset.cartoonDone="yes";
+  host.classList.add("cartoon-art-tile");
+  const img=document.createElement("img");
+  img.src=cdn+code+".svg";img.alt=label;img.loading="lazy";img.decoding="async";
+  img.onerror=()=>{img.remove();const fallback=document.createElement("span");fallback.className="art-fallback";fallback.textContent="♡";fallback.style.cssText="font-size:76px;color:#c58ea0";host.append(fallback)};
+  const a=document.createElement("span");a.className="art-sparkle a";a.textContent="✧";
+  const b=document.createElement("span");b.className="art-sparkle b";b.textContent="♡";
+  host.replaceChildren(a,img,b);
+ }
+ document.querySelectorAll(".art-slot[data-photo]").forEach(slot=>{
+  const key=slot.dataset.photo,code=art[key]||"1f496";
+  addArt(slot,code,labels[key]||"cute cartoon sticker");
+ });
+ const polaroid=document.querySelector(".polaroid-photo");
+ if(polaroid)addArt(polaroid,"1f381","cute wrapped birthday gift");
+ const portrait=document.querySelector(".round-photo .photo-slot");
+ if(portrait)addArt(portrait,"1f970","smiling face surrounded by hearts");
+})();
+</script>
+
 </body>
 </html>
