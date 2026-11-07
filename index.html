@@ -314,6 +314,52 @@ button{font:inherit}
  .final-line{grid-column:1;font-size:32px}
 }
 
+
+/* Responsive photo framing: preserve faces without stretching images */
+.photo-slot,
+.polaroid-photo,
+.round-photo,
+.round-photo .photo-slot {
+  position: relative;
+  overflow: hidden;
+}
+.photo-slot > img,
+.polaroid-photo > img,
+.round-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: var(--photo-position, 50% 18%);
+}
+.photo-slot > img { position: absolute; inset: 0; }
+.polaroid-photo > img { position: absolute; inset: 0; }
+.round-photo { overflow: hidden; }
+.round-photo .photo-slot {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  aspect-ratio: 1;
+  border: 0;
+}
+.round-photo .photo-slot > img {
+  border-radius: 50%;
+  object-position: var(--photo-position, 50% 15%);
+}
+/* Per-slot crop controls; tune --photo-position after inspecting each original */
+.art-crop-1 { --photo-position: 12% 10%; }
+.art-crop-2 { --photo-position: 88% 12%; }
+.art-crop-3 { --photo-position: 50% 50%; }
+.art-crop-4 { --photo-position: 18% 88%; }
+.art-crop-5 { --photo-position: 82% 85%; }
+.polaroid-photo { position: relative; overflow: hidden; }
+@media (max-width: 760px) {
+  .photo-slot > img,
+  .polaroid-photo > img { object-position: var(--photo-position, 50% 14%); }
+  .round-photo img { object-position: var(--photo-position, 50% 12%); }
+}
+
 </style>
 </head>
 <body>
