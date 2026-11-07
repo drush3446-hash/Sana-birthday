@@ -374,7 +374,7 @@ button{font:inherit}
 .round-photo .photo-slot.cartoon-art-tile{min-height:0;aspect-ratio:1;border:0;border-radius:50%}
 @media(max-width:760px){.cartoon-art-tile img{width:min(66%,125px);height:min(70%,125px)}.polaroid-photo.cartoon-art-tile{min-height:180px}}
 
-</style>
+[hidden]{display:none!important}\n</style>
 </head>
 <body>
 <div class="topbar"><a class="brand" href="#page-1">Sana's little scrapbook ♡</a><span>MADE BY ADNAN · JUST FOR SANA ♡</span></div>
@@ -395,11 +395,11 @@ button{font:inherit}
 <p class="copy">Kitty has been carrying this invitation all day. He really hopes you'll say yes.</p>
 <div class="actions"><button class="pill" id="accept">accept ♡</button><button class="pill secondary" id="decline">decline</button></div>
 <p class="caption" id="invite-message" aria-live="polite">a tiny surprise is waiting just for you</p>
-<a class="next-link" href="#page-3">continue <span>♡ →</span></a>
+<a class="next-link" id="continue-after-accept" href="#page-3" hidden>continue <span>♡ →</span></a>
 </div></div><div class="page-count">02 / 07</div>
 </section>
 
-<section class="scene pinstripe" id="page-3" aria-label="Page 3, choose a special date">
+<section class="scene pinstripe" id="page-3" hidden aria-label="Page 3, choose a special date">
 <div class="scene-inner">
 <div class="calendar-wrap">
 <div class="calendar-dog">
@@ -411,7 +411,7 @@ button{font:inherit}
 </div><div class="page-count">03 / 07</div>
 </section>
 
-<section class="scene blush" id="page-4" aria-label="Page 4, make a birthday wish">
+<section class="scene blush" id="page-4" hidden aria-label="Page 4, make a birthday wish">
 <div class="scene-inner"><div class="scene-card" style="background:#fffaf0c9;border-color:#d7b7c0">
 <p class="eyebrow">CLOSE YOUR EYES FOR A SECOND</p><h1>Make a wish,<br><em>birthday girl.</em></h1>
 <div class="cake-art" id="cake" role="button" tabindex="0" aria-label="Tap to blow out the candle">
@@ -423,7 +423,7 @@ button{font:inherit}
 </div></div><div class="page-count">04 / 07</div>
 </section>
 
-<section class="scene diamond" id="page-5" aria-label="Page 5, birthday polaroid">
+<section class="scene diamond" id="page-5" hidden aria-label="Page 5, birthday polaroid">
 <div class="scene-inner">
 <div class="birthday-badge">happy<br>birthday ♡</div>
 <div class="scene-card" style="max-width:620px;background:#fffaf0d9;border-color:#c9b9a5">
@@ -435,7 +435,7 @@ button{font:inherit}
 </div></div><div class="page-count">05 / 07</div>
 </section>
 
-<section class="letter-page" id="letter" aria-label="A birthday letter for Sana">
+<section class="letter-page" id="letter" hidden aria-label="A birthday letter for Sana">
 <div class="letter-shell">
 <p class="eyebrow">A NOTE WRITTEN JUST FOR YOU</p>
 <div class="letter-heading"><h1>HAPPY BIRTHDAY<br><em>SANA</em></h1><div class="cat-mascot cat-2" role="img" aria-label="Cute kitten sticker"></div></div>
@@ -452,7 +452,7 @@ button{font:inherit}
 </div>
 </section>
 
-<section class="reasons-page" id="reasons" aria-label="Ten things I love about you">
+<section class="reasons-page" id="reasons" hidden aria-label="Ten things I love about you">
 <header class="reasons-head"><p class="eyebrow">A LIST THAT COULD GO ON FOREVER</p><h1>10 THINGS I LOVE<br><em>ABOUT YOU</em></h1><p>Ten little reasons. A million more waiting to be written. ♡</p></header>
 <div class="reason-list">
 <article class="reason-panel"><div class="reason-copy"><span class="reason-number">01</span><h2 class="reason-title">Your smile</h2><p>It makes even an ordinary day feel softer and brighter.</p></div><div class="collage one"><div class="photo-slot art-slot art-crop-1" data-photo="smile" data-art="floral"><span class="photo-placeholder">SANA'S PHOTO ♡</span></div></div><span class="corner-doodle">♡</span></article>
@@ -476,8 +476,31 @@ const $$=(selector,root=document)=>Array.from(root.querySelectorAll(selector));
 const progress=$("#progress");
 function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max>0?scrollY/max*100:0)+"%"}
 addEventListener("scroll",updateProgress,{passive:true});addEventListener("resize",updateProgress);updateProgress();
-$("#accept").addEventListener("click",()=>{ $("#invite-message").textContent="YAY! Kitty is doing a happy little dance. ♡";$("#accept").textContent="accepted! ♡";$("#decline").hidden=true;});
-$("#decline").addEventListener("click",()=>{$("#invite-message").textContent="That's okay — Kitty will wait with the surprise. ♡";});
+function unlockInvitation(){
+  $("#invite-message").textContent="YAY! Kitty is doing a happy little dance. ♡";
+  $("#accept").textContent="accepted! ♡";
+  $("#decline").hidden=true;
+  $("#continue-after-accept").hidden=false;
+  ["#page-3","#page-4","#page-5","#letter","#reasons"].forEach(id=>$(id).hidden=false);
+}
+$("#accept").addEventListener("click",unlockInvitation);
+$("#decline").addEventListener("click",()=>{
+  const button=$("#decline");
+  $("#invite-message").textContent="Hehe, you have to catch the little button! ♡";
+  button.style.position="fixed";
+  button.style.zIndex="50";
+  const w=button.offsetWidth||110, h=button.offsetHeight||48, pad=12;
+  const acceptRect=$("#accept").getBoundingClientRect();
+  let x=pad,y=pad;
+  for(let attempt=0;attempt<24;attempt++){
+    x=pad+Math.random()*Math.max(1,innerWidth-w-pad*2);
+    y=pad+Math.random()*Math.max(1,innerHeight-h-pad*2);
+    const overlaps=x<acceptRect.right+35 && x+w>acceptRect.left-35 && y<acceptRect.bottom+35 && y+h>acceptRect.top-35;
+    if(!overlaps)break;
+  }
+  button.style.left=Math.round(x)+"px";
+  button.style.top=Math.round(y)+"px";
+});
 $$(".date-choice").forEach(button=>button.addEventListener("click",()=>{$$(".date-choice").forEach(item=>item.setAttribute("aria-pressed","false"));button.setAttribute("aria-pressed","true");$("#date-message").textContent="You picked "+button.dataset.date+" "+button.dataset.month+" ♡";}));
 function blowCandle(){const flame=$("#flame");if(flame.classList.contains("out"))return;flame.classList.add("out");$("#cake-caption").textContent="kitty says your wish is on its way ♡";$("#wish-message").textContent="May this year bring you everything your heart is wishing for. ✨";}
 $("#cake").addEventListener("click",blowCandle);$("#cake").addEventListener("keydown",event=>{if(event.key==="Enter"||event.key===" "){event.preventDefault();blowCandle();}});
